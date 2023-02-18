@@ -1,10 +1,9 @@
 <a name="readme-top"></a>
 
 <div align="center">
+![fiscalfocus-logo](fiscalfocus-logo.png)
 
   <br/>
-
-  <h3><b>Microverse README Template</b></h3>
 
 </div>
 
@@ -82,7 +81,8 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+- [Live Demo Link](https://fascalfocus1.onrender.com/)
+- [Video link](https://www.loom.com/share/0aeef1725c9b41b8999d66bb4da48ab9)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
