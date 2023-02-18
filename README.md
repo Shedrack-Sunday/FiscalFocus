@@ -82,7 +82,7 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- [Live Demo Link](https://fascalfocus1.onrender.com/)
+- [Live Demo Link](https://fascalfocus1.onrender.com)
 - [Video link](https://www.loom.com/share/0aeef1725c9b41b8999d66bb4da48ab9)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -204,9 +204,8 @@ If you like this project...
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
+o [Gregoire Vella](https://www.behance.net/gregoirevella) on Behance the author of the original design, as required by the [Creative Commons license of the design.](https://creativecommons.org/licenses/by-nc/4.0/)
 
-
-I would like to thank Microverse for the initiative 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
