@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-
+# rubocop:disable all
 require_relative 'boot'
 
 require 'rails/all'

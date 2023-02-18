@@ -14,11 +14,9 @@
 
   <% if devise_mapping.rememberable? %>
     <div class="field">
-      <%= f.check_box :remember_me %>
+      <%= f.check_box :remember_me  %>
       <%= f.label :remember_me %>
     </div>
   <% end %>
-
 <% end %>
-
-<%= link_to "Forgot your password?", new_password_path(resource_name) , class:'d-flex justify-content-center forget_pw_btn' %>
+ <%= link_to "Forgot your password?", new_password_path(resource_name) , class:'d-flex justify-content-center forget_pw_btn' %>
