@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 # rubocop:disable all
 class ApplicationRecord < ActiveRecord::Base
   primary_abstract_class

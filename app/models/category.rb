@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Servicefiles from the server
 class Category < ApplicationRecord
   belongs_to :user

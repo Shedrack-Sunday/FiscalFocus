@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 # rubocop:disable all
 class ApplicationMailer < ActionMailer::Base
   default from: 'from@example.com'

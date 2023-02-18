@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Servicefiles from the server
 class Expense < ApplicationRecord
   belongs_to :user
