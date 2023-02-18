@@ -3,7 +3,7 @@ class ExpensesController < ApplicationController
 
   def new
     @expense = Expense.new
-    @categories = Category.all.order(:name)
+    @categories = Category.where(user_id: current_user.id).order(:name)
   end
 
   def create
