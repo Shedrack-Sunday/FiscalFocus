@@ -1,8 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
+
   <br/>
 
   <h3><b>Microverse README Template</b></h3>
@@ -39,7 +38,7 @@
 
 
 
-**[your_project__name]** is a...
+**FiscalFocus** is a web app that helps users manage their budget. It has the option to set categories, and add data to that categories as per the users description.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -49,14 +48,14 @@
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li>CSS</a></li>
   </ul>
 </details>
 
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
+    <li>>Ruby on Rails</a></li>
   </ul>
 </details>
 
@@ -72,9 +71,9 @@
 ### Key Features <a name="key-features"></a>
 
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **Unique User login**
+- **User confirmation**
+- **Editing Categories**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -91,16 +90,18 @@
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
 
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
 In order to run this project you need:
+- Ruby 3.1.3 
+- Rails 7.0.4 
+- Postgress 
+- npm
 
-<!--
-Example command:
+
 
 ```sh
  gem install rails
@@ -111,24 +112,22 @@ Example command:
 
 Clone this repository to your desired folder:
 
-<!--
-Example commands:
+
 
 ```sh
   cd my-folder
-  git clone git@github.com:myaccount/my-project.git
+  git clone git@github.com:Sheedrack-Sunday/FascialFocus.git
 ```
---->
+
 
 ### Install
 
 Install this project with:
 
-<!--
-Example command:
+
 
 ```sh
-  cd my-project
+  cd FascialFocus
   gem install
 ```
 --->
@@ -136,9 +135,6 @@ Example command:
 ### Usage
 
 To run the project, execute the following command:
-
-<!--
-Example command:
 
 ```sh
   rails server
@@ -149,25 +145,10 @@ Example command:
 
 To run tests, run the following command:
 
-<!--
-Example command:
 
 ```sh
-  bin/rails test test/models/article_test.rb
+  bin/rails test test/models/<test files>
 ```
---->
-
-### Deployment
-
-You can deploy this project using:
-
-<!--
-Example:
-
-```sh
-
-```
- -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -179,9 +160,9 @@ Example:
 
 👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Shedraxk-Sunday](https://github.com/Shedrack-Sunday)
+- Twitter: [@DeleSundayS](https://twitter.com/DeleSundayS)
+- LinkedIn: [Shedrack-Sunday](https://linkedin.com/in/Shedrack-Sunday)
 
 
 
@@ -192,9 +173,9 @@ Example:
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **Section unique users**
+- [ ] **Deployment on the Cloud**
+- [ ] **Integration with React**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -224,22 +205,11 @@ If you like this project...
 
 
 
-I would like to thank...
+I would like to thank Microverse for the initiative 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FAQ (optional) -->
 
-## ❓ FAQ (OPTIONAL) <a name="faq"></a>
-
-
-- **[Question_1]**
-
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
