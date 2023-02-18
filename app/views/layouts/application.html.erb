@@ -17,6 +17,13 @@
   </head>
 
   <body class=layout_body>
+    <% if current_user %>
+      <%= link_to "Home", authenticated_root_path, :"data-turbolinks" => false %>
+       <%= link_to "Add a new expense", new_expense_path, :"data-turbolinks" => false %>
+        <%= link_to "Add a new category", new_category_path, :"data-turbolinks" => false %>
+         <%= link_to "Edit Profile", edit_user_registration_path, :"data-turbolinks" => false %>
+         <%= button_to 'Sign Out'.html_safe, destroy_user_session_path, method: :delete, :"data-turbolinks" => false, class: "flat-btn fs-4" %>
+     <%end%>
     
     <%= yield %>
     <p class="notice"><%= notice %></p>

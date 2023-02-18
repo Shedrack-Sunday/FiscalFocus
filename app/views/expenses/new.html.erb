@@ -1,0 +1,30 @@
+<section class="section-wrapper">
+    <div class="section-heading">
+        <span class="fs-4">
+            <i class="fa fa-credit-card" aria-hidden="true"></i>
+            New expense
+        </span>
+    </div>
+    <div class="section-content container mt-4">
+        <%= form_with model: @expense, url: expenses_path  do |f| %>
+        <div class="form-group pb-2">
+            <%= f.date_field :date_of_expense, :class => "form-control" %>
+        </div>
+        <div class="form-group pb-2">
+            <%= f.label :name, "What did you spend on?", class: "text-muted" %>
+            <%= f.text_field :name, :class => "form-control", maxlength: '200' %>
+        </div>
+        <div class="form-group pb-2">
+            <%= f.label :amount, "How much did you spend ($)", class: "text-muted" %>
+           <%= f.number_field :amount, class: 'form-control' %>
+        </div>
+        <div class="form-group pb-2">
+            <%= f.label :categories, "Expense category", class: "text-muted" %>
+            <%= f.select :categories, @categories.map { |category| [category.name, category.id] }, {:required => true, include_hidden: false, include_blank: ' - '}, {:class => 'form-control', :multiple => false} %>
+        </div>
+        <div class="form-group">
+            <%= f.submit "Add", :class => "btn submit-btn form-control" %>
+        </div>
+        <% end %>
+    </div>
+</section>

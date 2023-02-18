@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   
   devise_scope :user do
     authenticated :user do
-      root 'home#welcome', as: :authenticated_root
+      root 'categories#index', as: :authenticated_root
     end
 
     unauthenticated do
@@ -15,5 +15,5 @@ Rails.application.routes.draw do
   end
 
   resources :categories
-  resources :expenses, only: [:new, :create, :destroy]
+  resources :expenses, only: %i[:new, :create, :destroy]
 end
