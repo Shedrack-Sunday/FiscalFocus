@@ -1,0 +1,22 @@
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<nav class="navbar navbar-light bg-light justify-content-between nav_bar">
+  <%= link_to unauthenticated_root_path do %><i class="bi bi-arrow-left-circle-fill back_btn"></i> <% end %>
+  <span class="navbar-brand d-flex justify-content-center white_text">LOGIN</span>  
+   <%= f.submit "Sign In" , class:'btn btn-success my-2 my-sm-0 white_text action_btn ' %>
+</nav>
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" , class:'form-control', placeholder:'Email' %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "current-password", class:'form-control', placeholder:'Password' %>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me  %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end %>
+<% end %>
+ <%= link_to "Forgot your password?", new_password_path(resource_name) , class:'d-flex justify-content-center forget_pw_btn' %>

@@ -1,0 +1,20 @@
+<section class="section-wrapper">
+    <div class="section-heading">
+        <span class="fs-4">
+            <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+            New category
+        </span>
+    </div>
+    <div class="section-content container">
+            <%= form_with model: @category, url: categories_path, class: 'row', :html => { :multipart => true } do |f| %>
+                <i class="fa fa-credit-card fa-5x home_icons d-flex justify-content-center" aria-hidden="true"></i> 
+                    <div class="form-group pb-2">
+                        <%= f.label :name, "Category Name", class: "text-muted" %>
+                        <%= f.text_field :name, :class => "form-control", placeholder: 'Type here ..' %>
+                    </div>
+                    <div class="form-group">
+                        <%= f.submit "Create", :class => "btn btn-success btn-md btn-block d-flex justify-content-center" %>
+                    </div>
+            <% end %>
+    </div>
+</section>

@@ -1,0 +1,88 @@
+<div class="card bg-light mb-3 d-flex justify-content-center" style="max-width:95% ; margin:auto" >
+    <div class="card-header">EXPENSE SUMMARY</div>
+    <div class="card-body container ">
+        <div class="row d-flex justify-content-center mt-2">
+            <div class="col-4">
+              <i class="fa fa-credit-card fa-3x home_icons" aria-hidden="true"></i> 
+            </div>
+            <div class="col-6">
+                <span>
+                     <span style="font-size: 0.8rem">This Month </span><br/>
+                    <b><%= number_to_currency(@this_month) %></b>
+                </span>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center mt-3">
+            <div class="col-4">
+                <i class="fa fa-line-chart fa-3x home_icons" aria-hidden="true"></i> 
+            </div>
+            <div class="col-6">
+                <span>
+                    <span style="font-size: 0.8rem">Total Expenses </span><br/>
+                    <b><%= number_to_currency(@total_amount) %></b></span>
+                </span>
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-center mt-3">
+            <div class="col-4">
+                 <i class="fa fa-exclamation fa-3x home_icons" aria-hidden="true"></i> 
+            </div>
+            <div class="col-6">
+       <span style="font-size: 0.8rem">You spend so much on</span> <br/>           
+            <% if !@highest_category.nil? && @highest_category.total_amount > 0 %>  
+                <b><%= @highest_category.name if @highest_category.name %></b></span>
+            <% else %>
+                <b>no record yet</b></span>
+            <% end %>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="card bg-light mb-3 d-flex justify-content-center" style="max-width:95% ; margin:auto" >
+    <div class="card-header">Spending Categories</div>
+    <div class="card-body container ">
+    
+       <% @categories.each do |category| %>
+
+<div class="alert alert-secondary" role="alert">
+
+<div class="row d-flex justify-content-center mt-2">
+            <div class="col-2">
+               <i class="fa fa-tag fa-2x home_icons" aria-hidden="true"></i> 
+            </div>
+            <div class="col-8  justify-content-center">
+                <p class="fs-6"><%= category.name %></p>
+                <div style="font-weight: bolder;"><%= number_to_currency(category.total_amount) if category.total_amount.present? %></div>
+                <div style="font-weight: bolder;"><%= number_to_currency(0) if !category.total_amount.present? %></div>
+
+            </div>
+            <div class="col-2">
+               <i class="fa fa-ellipsis-v" aria-hidden="true" data-bs-toggle="dropdown" id="menu-#{category.id}"></i>
+                        <ul class="dropdown-menu" aria-labelledby="menu-#{category.id}">
+                            <li>
+                                <button class="dropdown-item" type="button">
+                                     <a href="<%= category_path(category.id) %>">
+                                        View
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                              <%= button_to 'Destroy', category_path(category.id), data: {:confirm => 'Are you sure?'}, :method => :delete, class:'dropdown-item' %>
+                            </li>
+                            
+                        </ul>
+            </div>
+        </div>
+    </div>
+       
+        <% end %>
+  </div>
+</div>
+
+<%= link_to new_category_path  do %>
+<button type="button" class="btn btn-success btn-lg btn-block btn_new_cat" style=" width:100%; border-radius:0; height:5%">New Category</button>
+
+        
+<% end %>
