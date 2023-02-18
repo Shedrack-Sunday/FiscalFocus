@@ -26,6 +26,14 @@
   width: 100%;
 }
 
+.nav_bar {
+  background-color: #3778c2 !important;
+}
+
+.white_text {
+  color: white;
+}
+
 .header {
   background-color: #3778c2;
   color: white;
@@ -40,6 +48,31 @@
 }
 
 .back_btn {
-  font-size: 20px;
+  margin-left: 50%;
+  font-size: 25px;
   color: white;
+}
+
+.action_btn {
+  margin-right: 5%;
+}
+
+.forget_pw_btn :active {
+  color: grey;
+}
+
+.home_icons {
+  width: 500px;
+}
+
+.btn_new_cat {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.btn_delete {
+  background-color: transparent;
+  border: none;
+  display: flex;
 }

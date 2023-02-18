@@ -1,0 +1,43 @@
+<section class="watch-board">
+    <div class="cat_name">
+        <span style="margin-left:0.1rem; padding-top: 1rem; font-size: 1.5rem;"><%= @category.name %></span> 
+    </div>
+    <div>
+        <span class="m-1" style="float:right; font-weight: bold;">
+        <%= number_to_currency(@category.total_amount) %></span>
+    </div>
+</section>
+<section class="list-wrapper expense-height">
+<div class="text-muted topic-expense side">EXPENSES</div>
+    <ul>
+        <% @expenses.each do |expense| %>
+               
+        <div class="alert alert-secondary" role="alert">
+            <div class="row d-flex justify-content-center mt-2">
+            <div class="col-1">
+               <i class="fa fa-tag fa-2x home_icons" aria-hidden="true"></i> 
+            </div>
+            <div class="col-9  justify-content-center">
+                <div class="expense">
+                    <%= expense.name %><br />
+                    <span class="text-muted date-expense"><%= expense.date_of_expense.strftime("%B %d, %Y") %> </span>
+                    <span style="float:right; font-weight: bold;">
+                        <%= number_to_currency(expense.amount) %>
+                    </span>
+                </div>
+            </div>
+            <div class="col-2">
+                <%= button_to ' <i class="fa fa-trash fa-2x trash shadow" aria-hidden="true"></i>'.html_safe, expense_path(expense.id),:method => :delete , class: 'btn_delete'%>
+            </div>
+        </div>
+    </div>
+
+
+        <% end %>
+   </ul>
+</section>
+<%= link_to new_expense_path, class: 'foot-button' do %>
+
+<button type="button" class="btn btn-success btn-lg btn-block btn_new_cat" style=" width:100%; border-radius:0; height:5%"> Add Expense</button>
+
+<% end %>
