@@ -44,11 +44,19 @@ gem 'jbuilder'
 # gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+
+gem 'factory_bot_rails'
+gem 'faker'
+gem 'ffi'
+gem 'image_processing'
+gem 'rails-controller-testing'
+
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
-
+gem 'cancancan'
+gem 'rspec-rails'
 # Use Sass to process CSS
 # gem "sassc-rails"
 
