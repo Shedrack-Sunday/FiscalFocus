@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 # rubocop:disable all
 class ExpensesController < ApplicationController
   before_action :authenticate_user!
