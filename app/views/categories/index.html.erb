@@ -1,0 +1,75 @@
+<section class="p-2 watch-board-main">
+    <div class="text-muted topic">EXPENSE SUMMARY</div>
+    <div class="dashboard">
+        <div class="cast cat_name">
+            <span class="item" style="background: #2ac897;">
+                <i class="fa fa-credit-card fs-3" aria-hidden="true"></i>
+            </span>
+            <span>
+                <span style="font-size: 0.8rem">This Month </span> <br/>
+                <b><%= number_to_currency(@this_month) %></b>
+            </span>
+        </div>
+        <div class="cast cat_name">
+            <span class="item" style="background: #fbb41a;">
+                <i class="fa fa-line-chart" aria-hidden="true"></i>
+            </span>
+            <span>                
+            <span style="font-size: 0.8rem">Total Expenses</span> <br/>
+            <b><%= number_to_currency(@total_amount) %></b></span>
+        </div>
+        <div class="cast cat_name">
+            <span class="item" style="background: #fe5d5b;">
+                <i class="fa fa-exclamation" aria-hidden="true"></i>
+            </span>
+            <span>  
+            <span style="font-size: 0.8rem">You spend so much on</span> <br/>           
+            <% if !@highest_category.nil? && @highest_category.total_amount > 0 %>  
+                <b><%= @highest_category.name if @highest_category.name %></b></span>
+            <% else %>
+                <b>no record yet</b></span>
+            <% end %>
+        </div>
+    </div>
+</section>
+<section class="list-wrapper">
+<div class="text-muted topic side">SPENDING CATEGORIES</div>
+    <ul>
+        <% @categories.each do |category| %>
+            <li class="category-item">
+                    <div class="dropdown delete-item">
+                        <i class="fa fa-long-arrow-right" aria-hidden="true" data-bs-toggle="dropdown" id="menu-#{category.id}"></i>
+                        <ul class="dropdown-menu" aria-labelledby="menu-#{category.id}">
+                            <li>
+                                <button class="dropdown-item" type="button">
+                                    <a href="<%= category_path(category.id) %>">
+                                        View Category
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="dropdown-item" type="button">
+                                    <a href="<%= category_path(category.id) %>" data-confirm="Are you sure you want to delete <%= category.name %>?" data-method="delete">
+                                        Delete Category
+                                    </a>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <%# <%= image_tag(category.image, size: '50x50', style: 'border-radius: 10px') if category.image.present? %> %>
+                    <%# <%= image_tag("no-category.jpg", size: '50x50', style: 'border-radius: 10px') if !category.image.present? %> %>
+                    <div class="cat_name">
+                        <span class="fs-6"><%= category.name %></span>
+                        <div style="font-weight: bolder;"><%= number_to_currency(category.total_amount) if category.total_amount.present? %></div>
+                        <div style="font-weight: bolder;"><%= number_to_currency(0) if !category.total_amount.present? %></div>
+
+                    </div>
+                </li>
+        <% end %>
+    </ul>
+</section>
+<%= link_to new_category_path, class: 'foot-button' do %>
+    <div class="btn-build">
+        New Category
+    </div>
+<% end %>

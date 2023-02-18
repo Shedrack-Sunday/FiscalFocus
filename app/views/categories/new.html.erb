@@ -1,0 +1,35 @@
+<section class="watch-board">
+    <div class="cat_name">
+        <%# <%= image_tag(@category.image, size: '50x50', style: 'border-radius: 10px') if @category.image.present? %>
+        <%# <%= image_tag("no-category.jpg", size: '50x50', style: 'border-radius: 10px') if !@category.image.present? %>
+        <span style="margin-left:0.1rem; padding-top: 1rem; font-size: 1.5rem;"><%= @category.name %></span> 
+    </div>
+    <div>
+        <span class="m-1" style="float:right; font-weight: bold;">
+        <%= number_to_currency(@category.total_amount) %></span>
+    </div>
+</section>
+<section class="list-wrapper expense-height">
+<div class="text-muted topic-expense side">EXPENSES</div>
+    <ul>
+        <% @expenses.each do |expense| %>
+                <li class="shadow">
+                    <a href="<%= expense_path(expense.id) %>" data-confirm="Are you sure you want to delete <%= expense.name %>?" data-method="delete" class='delete-bucket'>
+                        <i class="fa fa-trash trash shadow" aria-hidden="true"></i>
+                    </a>
+                    <div class="expense">
+                        <%= expense.name %><br />
+                        <span class="text-muted date-expense"><%= expense.date_of_expense.strftime("%B %d, %Y") %> </span>
+                        <span style="float:right; font-weight: bold;">
+                            <%= number_to_currency(expense.amount) %>
+                        </span>
+                    </div>
+                </li>
+        <% end %>
+   </ul>
+</section>
+<%= link_to new_expense_path, class: 'foot-button' do %>
+    <div class="btn-build">
+        Add Expense
+    </div>
+<% end %>
