@@ -17,6 +17,4 @@ RSpec.describe 'New Category', type: :feature do
     click_button('Sign In')
     visit(new_category_path)
   end
-  scenario('confirm that we are on the new category page') do
-  end
 end
