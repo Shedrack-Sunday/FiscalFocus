@@ -1,7 +1,8 @@
 <a name="readme-top"></a>
 
 <div align="center">
-![fiscalfocus-logo](fiscalfocus-logo.png)
+ <img src="fiscalfocus-logo.png" alt="My Image">
+
 
   <br/>
 
